@@ -329,7 +329,67 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
+      <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4">Экосистема</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Работает в экосистеме твоего мобильного оператора
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Связь, интернет, кэшбэк и тревел-помощник — всё в одном месте
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  icon: "Smartphone",
+                  title: "Домашний роуминг",
+                  desc: "При приезде в другой город — связь работает как дома. Без доплат и сюрпризов"
+                },
+                {
+                  icon: "Wifi",
+                  title: "Быстрый интернет",
+                  desc: "Стабильное подключение в любой точке маршрута. Навигация всегда под рукой"
+                },
+                {
+                  icon: "Coins",
+                  title: "Двойной кэшбэк",
+                  desc: "Бонусы от оператора и партнёров. Путешествуй — копи на следующую поездку"
+                }
+              ].map((item, index) => (
+                <Card key={index} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                      <Icon name={item.icon} size={32} className="text-primary" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.desc}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Icon name="Sparkles" size={32} />
+                <span className="text-2xl font-bold">Бонус для абонентов</span>
+              </div>
+              <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
+                Используй апельсины (бонусы X5) для оплаты подписки и партнёрских сервисов. 
+                Путешествуй больше — плати меньше
+              </p>
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 font-semibold">
+                Узнать условия <Icon name="ExternalLink" className="ml-2" size={20} />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
             Истории путешественников
