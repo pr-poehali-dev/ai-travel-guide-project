@@ -1,0 +1,49 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Subscribe valid email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": "test@example.com"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Subscribe invalid email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": "invalid-email"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "Invalid email"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Subscribe empty email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": ""
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "Invalid email"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

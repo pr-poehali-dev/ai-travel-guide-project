@@ -29,15 +29,40 @@ const EmailModal = ({ open, onOpenChange }: EmailModalProps) => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Спасибо!",
-        description: "Мы сообщим вам о запуске продукта",
+    try {
+      const response = await fetch("https://functions.poehali.dev/1b5928f6-a4ac-42bc-bca6-cd97a63dde92", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
       });
-      setEmail("");
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: "Спасибо!",
+          description: "Мы сообщим вам о запуске продукта",
+        });
+        setEmail("");
+        onOpenChange(false);
+      } else {
+        toast({
+          title: "Ошибка",
+          description: data.error || "Не удалось сохранить email",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка",
+        description: "Проблема с подключением. Попробуйте позже",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-      onOpenChange(false);
-    }, 1000);
+    }
   };
 
   return (
