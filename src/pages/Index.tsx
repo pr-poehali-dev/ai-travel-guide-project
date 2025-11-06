@@ -388,7 +388,7 @@ const Index = () => {
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-4 left-4">
-                      <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm">{story.type}</Badge>
+                      <Badge variant="secondary" className="bg-orange-500 text-white hover:bg-orange-600 backdrop-blur-sm">{story.type}</Badge>
                     </div>
                   </div>
                   <div className="p-6">
