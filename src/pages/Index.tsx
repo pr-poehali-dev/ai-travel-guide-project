@@ -449,17 +449,7 @@ const Index = () => {
             <p className="text-muted-foreground text-sm">
               © 2025 ИИ Тревел-Гид. Все права защищены.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Instagram" size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Send" size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Icon name="Mail" size={20} />
-              </a>
-            </div>
+
           </div>
         </div>
       </footer>
