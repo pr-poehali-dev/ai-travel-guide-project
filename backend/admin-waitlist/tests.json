@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Get waitlist without password",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "Unauthorized"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get waitlist with correct password",
+      "method": "GET",
+      "path": "/?password=admin2025",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
