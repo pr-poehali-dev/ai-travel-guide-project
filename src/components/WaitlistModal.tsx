@@ -38,7 +38,7 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
 
     try {
       const response = await fetch(
-        "https://functions.poehali.dev/acd21f9c-9f22-4301-8205-1ea6edbb52eb",
+        "https://functions.poehali.dev/1b5928f6-a4ac-42bc-bca6-cd97a63dde92",
         {
           method: "POST",
           headers: {
@@ -53,10 +53,6 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
       if (response.ok && data.success) {
         setIsSuccess(true);
         setEmail("");
-        toast({
-          title: "Успешно!",
-          description: "Вы в списке ожидания",
-        });
       } else {
         toast({
           title: "Ошибка",
@@ -131,9 +127,9 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
             <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
               <Icon name="Check" size={32} className="text-primary" />
             </div>
-            <DialogTitle className="text-2xl mb-2">Ты в списке!</DialogTitle>
+            <DialogTitle className="text-2xl mb-2">Спасибо!</DialogTitle>
             <DialogDescription className="text-base mb-6">
-              Скоро отправим приглашение на тест-драйв
+              Спасибо, что оставили контакт, обязательно свяжемся с вами после запуска!
             </DialogDescription>
             <Button onClick={handleClose} className="w-full">
               Отлично
