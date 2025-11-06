@@ -341,52 +341,60 @@ const Index = () => {
                 icon: "ClipboardList",
                 name: "Анна, 32",
                 quote: "Раньше тратила недели на планирование. Теперь — 10 минут. И план идеальный!",
-                color: "from-primary/10 to-accent/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/15b830ed-47b9-4ba0-bc73-8a16a7fb0429.jpg"
               },
               {
                 type: "Импровизатор",
                 icon: "Zap",
                 name: "Максим, 28",
                 quote: "Просто еду и спрашиваю ИИ что рядом. Свобода и никакого стресса.",
-                color: "from-secondary/10 to-primary/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/25408b76-b322-4dfb-859d-4c2dd5f143ec.jpg"
               },
               {
                 type: "Молодая семья",
                 icon: "Users",
                 name: "Елена и Дмитрий",
                 quote: "С двумя детьми путешествовать стало реально. ИИ учёл всё: от режима сна до кафе с детским меню.",
-                color: "from-accent/10 to-secondary/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/52aa72b2-04c3-4255-bd8f-2fc676109118.jpg"
               },
               {
                 type: "Цифровой кочевник",
                 icon: "Laptop",
                 name: "Артём, 26",
                 quote: "Работаю удалённо из разных городов. ИИ находит коворкинги, кафе с Wi-Fi, квартиры. Идеально.",
-                color: "from-primary/10 to-secondary/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/a604449b-cbab-45f0-8eb2-8425353ff92f.jpg"
               },
               {
                 type: "Нишевый турист",
                 icon: "Mountain",
                 name: "Ирина, 35",
                 quote: "Йога-ретрит в горах. ИИ нашёл студии, вегетарианские кафе, тихие места. Как будто читает мысли.",
-                color: "from-accent/10 to-primary/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/9ae7e4d1-0ed2-4d2c-bffc-1d646455740e.jpg"
               },
               {
                 type: "Спортсмен",
                 icon: "Bike",
                 name: "Сергей, 29",
                 quote: "Велопутешествие по Алтаю. Маршруты с учётом рельефа, кафе с ПП, места для ночлега. Топ!",
-                color: "from-secondary/10 to-accent/10"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/d1177dd9-8cfa-4705-9207-9e7d9345645c.jpg"
               }
             ].map((story, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
-                  <div className={`w-full h-32 rounded-lg bg-gradient-to-br ${story.color} flex items-center justify-center mb-4`}>
-                    <Icon name={story.icon} size={48} className="text-primary" />
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative w-full h-64 overflow-hidden">
+                    <img 
+                      src={story.image} 
+                      alt={story.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge variant="secondary" className="bg-white/90 backdrop-blur-sm">{story.type}</Badge>
+                    </div>
                   </div>
-                  <Badge variant="outline" className="mb-3">{story.type}</Badge>
-                  <h4 className="font-bold text-lg mb-2">{story.name}</h4>
-                  <p className="text-muted-foreground italic">"{story.quote}"</p>
+                  <div className="p-6">
+                    <h4 className="font-bold text-lg mb-2">{story.name}</h4>
+                    <p className="text-muted-foreground italic">"{story.quote}"</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
