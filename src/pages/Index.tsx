@@ -220,7 +220,12 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full" size="lg">
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  size="lg"
+                  onClick={() => setIsModalOpen(true)}
+                >
                   Начать бесплатно
                 </Button>
               </CardContent>
