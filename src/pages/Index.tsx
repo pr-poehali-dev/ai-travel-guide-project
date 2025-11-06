@@ -16,16 +16,17 @@ const Index = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%)',
-            opacity: 0.9
+            backgroundImage: "url('https://cdn.poehali.dev/files/50fe5921-7bb9-4ae4-a7e6-61b334a4dc59.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 z-0" style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.3
-        }} />
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%)'
+          }}
+        />
         
         <div className="container mx-auto px-4 z-10 text-center text-white animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
