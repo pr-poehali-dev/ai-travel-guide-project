@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Badge } from "@/components/ui/badge";
+import { WaitlistModal } from "@/components/WaitlistModal";
 
 const Index = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -28,9 +32,15 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
             Строит путешествие как твой идеальный плейлист
           </p>
-          <Button size="lg" className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 animate-scale-in">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 animate-scale-in"
+            onClick={() => setIsModalOpen(true)}
+          >
             Создать путешествие <Icon name="ArrowRight" className="ml-2" />
           </Button>
+
+          <WaitlistModal open={isModalOpen} onOpenChange={setIsModalOpen} />
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
