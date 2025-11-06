@@ -316,12 +316,9 @@ const Index = () => {
                 <span className="text-2xl font-bold">Бонус для абонентов</span>
               </div>
               <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
-                Используй апельсины (бонусы X5) для оплаты подписки и партнёрских сервисов. 
-                Путешествуй больше — плати меньше
+                Используй баллы X5 для оплаты подписки. Путешествуй больше - плати меньше
               </p>
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 font-semibold">
-                Узнать условия <Icon name="ExternalLink" className="ml-2" size={20} />
-              </Button>
+
             </div>
           </div>
         </div>
