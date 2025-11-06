@@ -67,7 +67,7 @@ const Index = () => {
               { icon: "MapPin", title: "Упускаешь классные места", desc: "Узнаёшь уже дома" },
               { icon: "Wallet", title: "Траты высокие", desc: "Не всегда оправданные" },
               { icon: "HelpCircle", title: "Не знаешь, чего хочешь", desc: "Выбор парализует" },
-              { icon: "Users", title: "Детям скучно", desc: "Диету нарушить легко" },
+              { icon: "Users", title: "Детям скучно", desc: "Не знаешь, чем их занять" },
               { icon: "Home", title: "Отель далеко", desc: "Питание ужасное" }
             ].map((pain, index) => (
               <Card key={index} className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
