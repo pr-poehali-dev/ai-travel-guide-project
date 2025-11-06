@@ -116,12 +116,6 @@ const Index = () => {
               </Card>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-              Тест-драйв ИИ-гида <Icon name="Play" className="ml-2" />
-            </Button>
-          </div>
         </div>
       </section>
 
