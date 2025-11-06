@@ -37,7 +37,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 animate-scale-in"
+            className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-white animate-scale-in"
             onClick={() => setIsModalOpen(true)}
           >
             Создать путешествие <Icon name="ArrowRight" className="ml-2" />
