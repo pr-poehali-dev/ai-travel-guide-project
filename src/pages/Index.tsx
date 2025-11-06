@@ -4,9 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Badge } from "@/components/ui/badge";
 import { WaitlistModal } from "@/components/WaitlistModal";
+import { TravelLeadModal } from "@/components/TravelLeadModal";
 
 const Index = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isTravelLeadModalOpen, setIsTravelLeadModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -41,6 +43,7 @@ const Index = () => {
           </Button>
 
           <WaitlistModal open={isModalOpen} onOpenChange={setIsModalOpen} />
+          <TravelLeadModal open={isTravelLeadModalOpen} onOpenChange={setIsTravelLeadModalOpen} />
         </div>
 
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -250,7 +253,11 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90" 
+                  size="lg"
+                  onClick={() => setIsTravelLeadModalOpen(true)}
+                >
                   Хочу путешествовать легко
                 </Button>
               </CardContent>
