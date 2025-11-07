@@ -11,7 +11,7 @@ const Index = () => {
   const [isTravelLeadModalOpen, setIsTravelLeadModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
@@ -29,10 +29,10 @@ const Index = () => {
         />
         
         <div className="container mx-auto px-4 z-10 text-center text-white animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Не планируй.<br />Путешествуй.<br />Будь как дома.
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 px-2">
             Собери путешествие как свой идеальный плейлист
           </p>
           <Button 
@@ -54,7 +54,7 @@ const Index = () => {
 
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 px-2">
             Путешествия — это проблема?
           </h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">
@@ -84,11 +84,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <Badge className="mb-4 text-sm px-4 py-1">Решение</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-2">
               Что делает ИИ-гид
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -123,9 +123,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/20">
+      <section className="py-12 sm:py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Как это работает
           </h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">
@@ -190,9 +190,9 @@ const Index = () => {
 
 
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 sm:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Тарифы
           </h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">
@@ -203,8 +203,8 @@ const Index = () => {
             <Card className="border-2 hover:shadow-xl transition-all duration-300">
               <CardContent className="p-8">
                 <Badge variant="secondary" className="mb-4">Freemium</Badge>
-                <h3 className="text-3xl font-bold mb-2">14 дней</h3>
-                <p className="text-5xl font-bold mb-6">Бесплатно</p>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">14 дней</h3>
+                <p className="text-4xl sm:text-5xl font-bold mb-6">Бесплатно</p>
                 <ul className="space-y-3 mb-8">
                   {[
                     "Полный доступ к ИИ-планировщику",
@@ -235,8 +235,8 @@ const Index = () => {
               </div>
               <CardContent className="p-8">
                 <Badge className="mb-4 bg-primary">Активный план</Badge>
-                <h3 className="text-3xl font-bold mb-2">Без ограничений</h3>
-                <p className="text-5xl font-bold mb-2">500 ₽</p>
+                <h3 className="text-2xl sm:text-3xl font-bold mb-2">Без ограничений</h3>
+                <p className="text-4xl sm:text-5xl font-bold mb-2">500 ₽</p>
                 <p className="text-muted-foreground mb-6">в месяц</p>
                 <ul className="space-y-3 mb-8">
                   {[
@@ -267,12 +267,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-primary/10 via-accent/10 to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <Badge className="mb-4">Экосистема</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-2">
                 Работает в экосистеме твоего мобильного оператора
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -311,11 +311,11 @@ const Index = () => {
             </div>
 
             <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl">
-              <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
                 <Icon name="Sparkles" size={32} />
-                <span className="text-2xl font-bold">Бонус для абонентов</span>
+                <span className="text-xl sm:text-2xl font-bold text-center">Бонус для абонентов</span>
               </div>
-              <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg mb-6 opacity-90 max-w-2xl mx-auto px-4">
                 Используй баллы X5 для оплаты подписки. Путешествуй больше - плати меньше
               </p>
 
@@ -324,9 +324,9 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-background to-primary/5">
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-background to-primary/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Истории путешественников
           </h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">
@@ -401,9 +401,9 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-primary/5 py-12 border-t">
+      <footer className="bg-primary/5 py-8 sm:py-12 border-t">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8">
             <div>
               <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
                 <Icon name="Plane" size={24} className="text-primary" />
