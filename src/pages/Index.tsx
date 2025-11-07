@@ -37,7 +37,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-white animate-scale-in"
+            className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-secondary hover:bg-secondary/90 text-white animate-scale-in"
             onClick={() => setIsModalOpen(true)}
           >
             Создать путешествие <Icon name="ArrowRight" className="ml-2" />
@@ -52,16 +52,16 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 sm:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 px-2">
             Путешествия — это проблема?
           </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">
             Знакомые боли каждого путешественника
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               { icon: "Clock", title: "Планировать долго и сложно", desc: "Часы на форумах и картах" },
               { icon: "MapPin", title: "Упускаешь классные места", desc: "Узнаёшь уже дома" },
@@ -71,7 +71,7 @@ const Index = () => {
               { icon: "Home", title: "Отель далеко", desc: "Питание ужасное" }
             ].map((pain, index) => (
               <Card key={index} className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-4 sm:p-6 text-center">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-destructive/10 flex items-center justify-center">
                     <Icon name={pain.icon} size={32} className="text-destructive" />
                   </div>
@@ -96,7 +96,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
               { icon: "Sparkles", title: "Создаёт план", desc: "За минуты, не за часы. Учитывает всё: интересы, бюджет, режим дня" },
               { icon: "Target", title: "Персонализирует", desc: "Под тебя, семью, детей, диету, спорт. Как будто знает тебя лично" },
@@ -106,13 +106,13 @@ const Index = () => {
               { icon: "Shield", title: "Экономит деньги", desc: "Находит лучшие цены, даёт кэшбэк, защищает от переплат" }
             ].map((solution, index) => (
               <Card key={index} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Icon name={solution.icon} size={24} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-xl mb-2">{solution.title}</h3>
+                      <h3 className="font-bold text-lg sm:text-xl mb-2">{solution.title}</h3>
                       <p className="text-muted-foreground">{solution.desc}</p>
                     </div>
                   </div>
@@ -128,11 +128,11 @@ const Index = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Как это работает
           </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">
             Три простых шага до идеального путешествия
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { 
                 step: "01", 
@@ -161,8 +161,8 @@ const Index = () => {
                   <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-primary/10 -z-10">
                     {step.step}
                   </div>
-                  <h3 className="font-bold text-2xl mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground text-lg">{step.desc}</p>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground text-base sm:text-lg px-2">{step.desc}</p>
                 </div>
                 {index < 2 && (
                   <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary to-transparent" />
@@ -171,7 +171,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="mt-16 max-w-3xl mx-auto bg-card border-2 border-primary/20 rounded-2xl p-8 shadow-xl">
+          <div className="mt-16 max-w-3xl mx-auto bg-card border-2 border-primary/20 rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon name="Bot" size={20} className="text-primary" />
@@ -179,7 +179,7 @@ const Index = () => {
               <span className="font-semibold text-lg">Диалоговое окно</span>
               <Badge variant="secondary" className="ml-auto">Powered by DeepSeek</Badge>
             </div>
-            <div className="bg-muted/50 rounded-lg p-6 font-mono text-sm">
+            <div className="bg-muted/50 rounded-lg p-4 sm:p-6 font-mono text-xs sm:text-sm">
               <p className="mb-3"><span className="text-primary font-bold">Вы:</span> Еду в Сочи с семьёй на неделю</p>
               <p className="mb-3"><span className="text-accent font-bold">ИИ:</span> Отлично! Расскажите больше: дети какого возраста? Любите активный отдых или релакс?</p>
               <p><span className="text-primary font-bold">Вы:</span> Двое детей 5 и 8 лет, хотим и пляж, и горы</p>
@@ -195,13 +195,13 @@ const Index = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Тарифы
           </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">
             Попробуй бесплатно, продолжай с удовольствием
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <Card className="border-2 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <Badge variant="secondary" className="mb-4">Freemium</Badge>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">14 дней</h3>
                 <p className="text-4xl sm:text-5xl font-bold mb-6">Бесплатно</p>
@@ -230,10 +230,10 @@ const Index = () => {
             </Card>
 
             <Card className="border-2 border-primary hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-secondary text-white px-4 py-1 text-sm font-semibold">
+              <div className="absolute top-0 right-0 bg-secondary text-white px-3 sm:px-4 py-1 text-xs sm:text-sm font-semibold">
                 Популярный
               </div>
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <Badge className="mb-4 bg-primary">Активный план</Badge>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">Без ограничений</h3>
                 <p className="text-4xl sm:text-5xl font-bold mb-2">500 ₽</p>
@@ -275,12 +275,12 @@ const Index = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-2">
                 Работает в экосистеме твоего мобильного оператора
               </h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                 Связь, интернет, кэшбэк и тревел-помощник — всё в одном месте
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {[
                 {
                   icon: "Smartphone",
@@ -299,7 +299,7 @@ const Index = () => {
                 }
               ].map((item, index) => (
                 <Card key={index} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-4 sm:p-6 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                       <Icon name={item.icon} size={32} className="text-primary" />
                     </div>
@@ -310,7 +310,7 @@ const Index = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl">
+            <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-6 sm:p-8 md:p-12 text-white text-center shadow-2xl">
               <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
                 <Icon name="Sparkles" size={32} />
                 <span className="text-xl sm:text-2xl font-bold text-center">Бонус для абонентов</span>
@@ -329,11 +329,11 @@ const Index = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Истории путешественников
           </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">
             Для каждого — свой сценарий
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {[
               {
                 type: "Планировщик",
@@ -390,7 +390,7 @@ const Index = () => {
                       <Badge variant="secondary" className="bg-orange-500 text-white hover:bg-orange-600 backdrop-blur-sm">{story.type}</Badge>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <h4 className="font-bold text-lg mb-2">{story.name}</h4>
                     <p className="text-muted-foreground italic">"{story.quote}"</p>
                   </div>
