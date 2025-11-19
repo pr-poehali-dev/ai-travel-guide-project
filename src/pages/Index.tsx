@@ -195,9 +195,7 @@ const Index = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 px-2">
             Тарифы
           </h2>
-          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">
-            Попробуй бесплатно, продолжай с удовольствием
-          </p>
+          <p className="text-center text-muted-foreground mb-12 sm:mb-16 text-base sm:text-lg px-2">Попробуй бесплатно, продолжи с удовольствием</p>
 
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             <Card className="border-2 hover:shadow-xl transition-all duration-300">
