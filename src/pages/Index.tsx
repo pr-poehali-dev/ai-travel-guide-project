@@ -181,7 +181,7 @@ const Index = () => {
             </div>
             <div className="bg-muted/50 rounded-lg p-4 sm:p-6 font-mono text-xs sm:text-sm">
               <p className="mb-3"><span className="text-primary font-bold">Вы:</span> Еду в Сочи с семьёй на неделю</p>
-              <p className="mb-3"><span className="text-accent font-bold">ИИ:</span> Отлично! Расскажите больше: дети какого возраста? Любите активный отдых или релакс?</p>
+              <p className="mb-3"><span className="text-accent font-bold">ИИ:</span> Отлично! Расскажи, чего хочется: активного отдыха или побольше релакса?</p>
               <p><span className="text-primary font-bold">Вы:</span> Двое детей 5 и 8 лет, хотим и пляж, и горы</p>
             </div>
           </div>
