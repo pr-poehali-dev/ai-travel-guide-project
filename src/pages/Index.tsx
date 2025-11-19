@@ -234,7 +234,7 @@ const Index = () => {
               <CardContent className="p-6 sm:p-8">
                 <Badge className="mb-4 bg-primary">Активный план</Badge>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-2">Без ограничений</h3>
-                <p className="text-4xl sm:text-5xl font-bold mb-2">500 ₽</p>
+                <p className="text-4xl sm:text-5xl font-bold mb-2">499 ₽</p>
                 <p className="text-muted-foreground mb-6">в месяц</p>
                 <ul className="space-y-3 mb-8">
                   {[
