@@ -340,42 +340,42 @@ const Index = () => {
                 icon: "ClipboardList",
                 name: "Анна, 32",
                 quote: "Раньше тратила недели на планирование. Теперь — 10 минут. И план идеальный!",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/15b830ed-47b9-4ba0-bc73-8a16a7fb0429.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/4a773b27-37f9-408e-8ca5-6db9508e1f49.jpg"
               },
               {
                 type: "Импровизатор",
                 icon: "Zap",
                 name: "Максим, 28",
                 quote: "Просто еду и спрашиваю ИИ что рядом. Свобода и никакого стресса.",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/25408b76-b322-4dfb-859d-4c2dd5f143ec.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/c0baf497-298e-4693-b1ca-b67ab436e749.jpg"
               },
               {
                 type: "Молодая семья",
                 icon: "Users",
                 name: "Елена и Дмитрий",
                 quote: "С двумя детьми путешествовать стало реально. ИИ учёл всё: от режима сна до кафе с детским меню.",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/52aa72b2-04c3-4255-bd8f-2fc676109118.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/35ae28e0-379a-46ed-ac8e-6dac3e7daf7e.jpg"
               },
               {
                 type: "Цифровой кочевник",
                 icon: "Laptop",
                 name: "Артём, 26",
                 quote: "Работаю удалённо из разных городов. ИИ находит коворкинги, кафе с Wi-Fi, квартиры. Идеально.",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/a604449b-cbab-45f0-8eb2-8425353ff92f.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/f26ca836-9622-4785-9951-179ccbf97109.jpg"
               },
               {
                 type: "Нишевый турист",
                 icon: "Mountain",
                 name: "Ирина, 35",
                 quote: "Йога-ретрит в горах. ИИ нашёл студии, вегетарианские кафе, тихие места. Как будто читает мысли.",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/9ae7e4d1-0ed2-4d2c-bffc-1d646455740e.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/2ef58b8a-ad4b-4739-9047-539af6cf7ce1.jpg"
               },
               {
                 type: "Спортсмен",
                 icon: "Bike",
                 name: "Сергей, 29",
                 quote: "Велопутешествие по Алтаю. Маршруты с учётом рельефа, кафе с ПП, места для ночлега. Топ!",
-                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/d1177dd9-8cfa-4705-9207-9e7d9345645c.jpg"
+                image: "https://cdn.poehali.dev/projects/b10c7d8f-c8ea-4f01-b0fe-c291bd161778/files/68682521-03b3-4a9b-9bbb-0bae89dd4e87.jpg"
               }
             ].map((story, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
