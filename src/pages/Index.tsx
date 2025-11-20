@@ -295,7 +295,7 @@ const Index = () => {
                 {
                   icon: "Coins",
                   title: "Двойной кэшбэк",
-                  desc: "Бонусы от оператора и партнёров. Путешествуй — копи на следующую поездку"
+                  desc: "Бонусы от оператора и партнёров. Путешествуй — копи на следующую поездку и получай бонусы"
                 }
               ].map((item, index) => (
                 <Card key={index} className="border-2 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
