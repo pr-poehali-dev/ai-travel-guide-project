@@ -61,22 +61,25 @@ const Index = () => {
             Знакомые боли каждого путешественника
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6">
             {[
-              { icon: "Clock", title: "Планировать долго и сложно", desc: "Часы на форумах и картах" },
-              { icon: "MapPin", title: "Упускаешь классные места", desc: "Узнаёшь уже дома" },
-              { icon: "Wallet", title: "Траты высокие", desc: "Не всегда оправданные" },
-              { icon: "HelpCircle", title: "Не знаешь, чего хочешь", desc: "Выбор парализует" },
-              { icon: "Users", title: "Детям скучно", desc: "Не знаешь, чем их занять" },
-              { icon: "Home", title: "Отель далеко", desc: "Питание ужасное" }
+              { icon: "Clock", quote: "Трачу часы на форумах и картах. Планировать долго и сложно — уже устал ещё до поездки" },
+              { icon: "MapPin", quote: "Узнаю о классных местах уже дома. Обидно упускать то, что было рядом" },
+              { icon: "Wallet", quote: "Траты всегда выше, чем планировал. Не всегда понимаю, за что переплачиваю" },
+              { icon: "HelpCircle", quote: "Не знаю, чего хочу. Выбор парализует — слишком много вариантов" },
+              { icon: "Users", quote: "Детям скучно, не знаю чем их занять. Поездка превращается в стресс" },
+              { icon: "Home", quote: "Отель далеко от всего, а питание ужасное. Надо было лучше выбирать" }
             ].map((pain, index) => (
-              <Card key={index} className="border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <CardContent className="p-4 sm:p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-destructive/10 flex items-center justify-center">
-                    <Icon name={pain.icon} size={32} className="text-destructive" />
+              <Card key={index} className="border-l-4 border-l-destructive hover:shadow-lg transition-all duration-300 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardContent className="p-6">
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center flex-shrink-0">
+                      <Icon name={pain.icon} size={24} className="text-destructive" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-lg italic text-muted-foreground">"{pain.quote}"</p>
+                    </div>
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{pain.title}</h3>
-                  <p className="text-muted-foreground">{pain.desc}</p>
                 </CardContent>
               </Card>
             ))}
