@@ -182,10 +182,18 @@ const Index = () => {
               <span className="font-semibold text-lg">Диалоговое окно</span>
               <Badge variant="secondary" className="ml-auto">Powered by DeepSeek</Badge>
             </div>
-            <div className="bg-muted/50 rounded-lg p-4 sm:p-6 font-mono text-xs sm:text-sm">
-              <p className="mb-3"><span className="text-primary font-bold">Вы:</span> Еду в Сочи с семьёй на неделю</p>
-              <p className="mb-3"><span className="text-accent font-bold">ИИ:</span> Отлично! Расскажи, чего хочется: активного отдыха или побольше релакса?</p>
+            <div className="bg-muted/50 rounded-lg p-4 sm:p-6 font-mono text-xs sm:text-sm space-y-3">
+              <p><span className="text-primary font-bold">Вы:</span> Еду в Сочи с семьёй на неделю</p>
+              <p><span className="text-accent font-bold">ИИ:</span> Отлично! Расскажи, чего хочется: активного отдыха или побольше релакса?</p>
               <p><span className="text-primary font-bold">Вы:</span> Двое детей 5 и 8 лет, хотим и пляж, и горы</p>
+              <p><span className="text-accent font-bold">ИИ:</span> Отлично, вот ваша программа, которая понравится и вам, и вашим детям:</p>
+              <div className="ml-4 mt-2 space-y-1 text-muted-foreground">
+                <p>📅 День 1-2: Акклиматизация на пляже Ривьера (детская площадка рядом)</p>
+                <p>📅 День 3: Олимпийский парк + океанариум</p>
+                <p>📅 День 4: Роза Хутор — канатка, горы, активности для детей</p>
+                <p>📅 День 5: Сочи Парк — аттракционы</p>
+                <p>📅 День 6-7: Свободное время, пляж, резервные планы</p>
+              </div>
             </div>
           </div>
         </div>
